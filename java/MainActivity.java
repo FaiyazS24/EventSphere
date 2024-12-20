@@ -1,4 +1,4 @@
-// ## Developed By: Faiyaz Sattar & Mohit Singh
+## Developed By: Faiyaz Sattar & Mohit Singh
 
 package com.example.eventsclientapp1;
 

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="8dp"
+    android:elevation="4dp"
+    android:background="@android:color/white">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="12dp">
+
+        <!-- Event Image -->
+        <ImageView
+            android:id="@+id/eventImage"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:scaleType="centerCrop"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <!-- Event Name -->
+        <TextView
+            android:id="@+id/textViewEventName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Event Name"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@id/eventImage"
+            app:layout_constraintTop_toTopOf="@id/eventImage"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginStart="8dp"
+            android:ellipsize="end"
+            android:maxLines="1" />
+
+
+        <!-- Event Location -->
+        <TextView
+            android:id="@+id/textViewLocation"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Location"
+            android:textColor="@android:color/black"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="@id/textViewEventName"
+            app:layout_constraintTop_toBottomOf="@id/textViewEventName"
+            android:layout_marginTop="4dp" />
+
+        <!-- Event Price -->
+        <TextView
+            android:id="@+id/textViewPrice"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Price: $0.00"
+            android:textColor="@android:color/holo_red_dark"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="@id/textViewLocation"
+            app:layout_constraintTop_toBottomOf="@id/textViewLocation"
+            android:layout_marginTop="4dp" />
+
+        <!-- Remove Button -->
+        <Button
+            android:id="@+id/buttonRemove"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="44dp"
+            android:backgroundTint="@android:color/holo_red_dark"
+            android:text="Remove"
+            android:textColor="@android:color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

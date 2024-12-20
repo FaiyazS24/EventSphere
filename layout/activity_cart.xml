@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+  <!-- Toolbar/Header -->
+  <androidx.appcompat.widget.Toolbar
+      android:id="@+id/toolbar"
+      android:layout_width="match_parent"
+      android:layout_height="?attr/actionBarSize"
+      android:layout_marginBottom="10dp"
+      android:background="#07636C"
+      app:title="Cart"
+      app:titleTextColor="@android:color/white" />
+
+  <!-- RecyclerView -->
+  <androidx.recyclerview.widget.RecyclerView
+      android:id="@+id/recyclerViewCart"
+      android:layout_width="match_parent"
+      android:layout_height="0dp"
+      android:layout_weight="1"/>
+
+  <!-- Checkout Button -->
+  <Button
+      android:id="@+id/buttonCheckout"
+      android:layout_width="250dp"
+      android:layout_height="50dp"
+      android:layout_gravity="center"
+      android:layout_margin="16dp"
+      android:backgroundTint="#07636C"
+      android:text="Checkout"
+      android:textColor="@android:color/white"
+      android:textSize="20sp"
+      android:textStyle="bold" />
+
+  <!-- Bottom Navigation View -->
+  <com.google.android.material.bottomnavigation.BottomNavigationView
+      android:id="@+id/bottomNavigationView"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      app:menu="@menu/bottom_nav_menu" />
+
+</LinearLayout>

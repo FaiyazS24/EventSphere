@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Toolbar -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/checkouttoolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="10dp"
+        android:background="#07636C"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:title="Checkout"
+        app:titleTextColor="@android:color/white" />
+    <!-- RecyclerView for Events -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewCheckout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="vertical" />
+
+    <!-- Total Price -->
+    <TextView
+        android:id="@+id/textViewTotalPrice"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginRight="10dp"
+        android:text="Total: $0.00"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <!-- Card Number -->
+    <EditText
+        android:id="@+id/editTextCardNumber"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/input_background"
+        android:hint="Card Number (16 digits)"
+        android:inputType="number"
+        android:maxLength="16"
+        android:padding="12dp" />
+
+    <!-- Expiry Date -->
+    <EditText
+        android:id="@+id/editTextExpiryDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/input_background"
+        android:hint="Expiry Date (MM/YY)"
+        android:inputType="text"
+        android:maxLength="5"
+        android:padding="12dp" />
+
+    <!-- CVV -->
+    <EditText
+        android:id="@+id/editTextCVV"
+        android:layout_width="330dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/input_background"
+        android:hint="CVV (3 digits)"
+        android:inputType="numberPassword"
+        android:maxLength="3"
+        android:padding="12dp" />
+
+    <!-- Confirm Purchase Button -->
+    <Button
+        android:id="@+id/buttonConfirmPurchase"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="#07636C"
+        android:text="Confirm Purchase"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+</LinearLayout>
